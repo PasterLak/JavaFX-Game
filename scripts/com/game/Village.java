@@ -1,6 +1,6 @@
 package com.game;
 
-public class Village extends Location
+public class Village extends Ort
 {
     public Village(String name)
     {

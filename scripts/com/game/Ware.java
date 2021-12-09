@@ -1,12 +1,13 @@
 package com.game;
 
-public abstract class Ware
+public class Ware
 {
+    public int id;
     public String name;
-    public int gewicht;
+    public float gewicht;
     public int preis;
 
-    public Ware(String name, int gewicht, int preis)
+    public Ware(int id, String name, float gewicht, int preis)
     {
 
     }

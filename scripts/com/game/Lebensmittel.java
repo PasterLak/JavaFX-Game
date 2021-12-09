@@ -4,8 +4,8 @@ public class Lebensmittel extends Ware
 {
     public final static byte HP_RESTORE = 20;
 
-    public Lebensmittel(String name, int gewicht, int preis)
+    public Lebensmittel(int id, String name, float gewicht, int preis)
     {
-        super(name, gewicht, preis);
+        super(id, name, gewicht, preis);
     }
 }

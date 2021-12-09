@@ -5,8 +5,11 @@ import java.util.Arrays;
 public class Esel
 {
     private final static byte INVENTORY_SIZE = 10;
+    private final static float MAX_LOAD = 100f;
+
 
     private Ware waren[] = new Ware[INVENTORY_SIZE];
+    private float warenGewicht = 0;
 
     public Esel ()
     {
@@ -37,6 +40,7 @@ public class Esel
         byte emptySlotID = findEmptySlot();
 
         waren[emptySlotID] = ware;
+
 
     }
     public void removeItem(Ware ware)
