@@ -1,29 +1,42 @@
 package com.game;
 
-public class GameController
+public final class GameController
 {
-    private final static byte CITIES_COUNT = 1;
-    private final static byte VILLAGES_COUNT = 4;
+    private static GameController INSTANCE;
 
     private byte day = 0;
-    Map map = new Map();
-    Spieler spieler = new Spieler(map.START_ORT);
 
+    private Map map = new Map();
+    private Spieler spieler = new Spieler(map.START_ORT);
 
 
     public GameController()
     {
-        day = 0;
-
+        day = 1;
     }
 
-    public void move()
+    public static GameController getInstance()
+    {
+        if(INSTANCE == null) {
+            INSTANCE = new GameController();
+        }
+
+        return INSTANCE;
+    }
+
+    public void nextDay()
     {
         day++;
-        spieler.removeHp(20);
+        UIController.INSTANCE.updateDays(day);
+        AudioController.INSTANCE.play();
+
+        if(day == 100)
+        {
+            endGame();
+        }
     }
 
-    public void endGame()
+    private void endGame()
     {
         showResults();
     }

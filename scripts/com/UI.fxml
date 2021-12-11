@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #B6C454;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.game.UIController">
+    <children>
+        <ImageView fx:id="background" fitHeight="641.0" fitWidth="1280.0" layoutY="79.0" pickOnBounds="true">
+            <image>
+                <Image url="@../../sprites/map/background.png" />
+            </image>
+        </ImageView>
+        <Text fx:id="moneyText" layoutX="253.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100" wrappingWidth="261.4453125">
+            <font>
+                <Font size="48.0" />
+            </font>
+        </Text>
+        <Button fx:id="button1" layoutX="1076.0" layoutY="647.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="178.0" style="-fx-background-color: #B6C454;" text="Next Day -&gt;">
+            <font>
+                <Font size="24.0" />
+            </font></Button>
+
+        <Text fx:id="daysText" layoutX="1076.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100" textAlignment="RIGHT" wrappingWidth="117.0">
+            <font>
+                <Font size="48.0" />
+            </font>
+        </Text>
+        <ImageView fx:id="moneyIcon" fitHeight="57.0" fitWidth="63.0" layoutX="185.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../sprites/UI/apple.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="daysIcon" fitHeight="57.0" fitWidth="63.0" layoutX="1203.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../sprites/UI/apple.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="foodIcon" fitHeight="57.0" fitWidth="63.0" layoutX="24.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../sprites/UI/apple.png" />
+            </image>
+        </ImageView>
+        <Text fx:id="foodText" layoutX="84.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100" wrappingWidth="117.0">
+            <font>
+                <Font size="48.0" />
+            </font>
+        </Text>
+    </children>
+</AnchorPane>
