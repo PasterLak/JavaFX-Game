@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #B6C454;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.game.UIController">
+<AnchorPane fx:id="basic" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #B6C454;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.game.UIController">
     <children>
         <ImageView fx:id="background" fitHeight="641.0" fitWidth="1280.0" layoutY="79.0" pickOnBounds="true">
-            <image>
-                <Image url="@../../sprites/map/background.png" />
-            </image>
+         <image>
+            <Image url="file:sprites/map/background.png" />
+         </image>
         </ImageView>
         <Text fx:id="moneyText" layoutX="253.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100" wrappingWidth="261.4453125">
             <font>
                 <Font size="48.0" />
             </font>
         </Text>
-        <Button fx:id="button1" layoutX="1076.0" layoutY="647.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="178.0" style="-fx-background-color: #B6C454;" text="Next Day -&gt;">
-            <font>
-                <Font size="24.0" />
-            </font></Button>
 
         <Text fx:id="daysText" layoutX="1076.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100" textAlignment="RIGHT" wrappingWidth="117.0">
             <font>
@@ -31,17 +31,17 @@
         </Text>
         <ImageView fx:id="moneyIcon" fitHeight="57.0" fitWidth="63.0" layoutX="185.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../sprites/UI/apple.png" />
+                <Image url="file:sprites/UI/money.png" />
             </image>
         </ImageView>
         <ImageView fx:id="daysIcon" fitHeight="57.0" fitWidth="63.0" layoutX="1203.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../sprites/UI/apple.png" />
+                <Image url="file:sprites/UI/day.png" />
             </image>
         </ImageView>
         <ImageView fx:id="foodIcon" fitHeight="57.0" fitWidth="63.0" layoutX="24.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../sprites/UI/apple.png" />
+                <Image url="file:sprites/UI/apple.png" />
             </image>
         </ImageView>
         <Text fx:id="foodText" layoutX="84.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100" wrappingWidth="117.0">
@@ -49,5 +49,118 @@
                 <Font size="48.0" />
             </font>
         </Text>
+      <Text fx:id="cityText" layoutX="496.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Erfurt" textAlignment="CENTER" wrappingWidth="327.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="villageText1" layoutX="210.0" layoutY="478.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Schmalkalden" textAlignment="CENTER" wrappingWidth="327.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="villageText4" layoutX="789.0" layoutY="439.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ilmenau" textAlignment="CENTER" wrappingWidth="327.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="villageText2" layoutX="106.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Eisenach" textAlignment="CENTER" wrappingWidth="327.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="villageText3" layoutX="889.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Weimar" textAlignment="CENTER" wrappingWidth="327.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Button fx:id="buttonCity" layoutX="472.0" layoutY="240.0" mnemonicParsing="false" opacity="0.0" prefHeight="143.0" prefWidth="393.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonVillage1" layoutX="287.0" layoutY="461.0" mnemonicParsing="false" opacity="0.0" prefHeight="143.0" prefWidth="156.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonVillage2" layoutX="192.0" layoutY="112.0" mnemonicParsing="false" opacity="0.0" prefHeight="143.0" prefWidth="156.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonVillage3" layoutX="953.0" layoutY="108.0" mnemonicParsing="false" opacity="0.0" prefHeight="143.0" prefWidth="156.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonVillage4" layoutX="875.0" layoutY="430.0" mnemonicParsing="false" opacity="0.0" prefHeight="143.0" prefWidth="156.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="musicButton" layoutX="1200.0" layoutY="88.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #B6C454;" text="">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="waitButton" layoutX="1064.0" layoutY="643.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="178.0" style="-fx-background-color: #B6C454;" text="Warten">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="eatButton" layoutX="32.0" layoutY="647.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="178.0" style="-fx-background-color: #B6C454;" text="Essen">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="workButton" layoutX="383.0" layoutY="88.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="178.0" style="-fx-background-color: #B6C454;" text="Work: Feldarbeit">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="player" fitHeight="111.0" fitWidth="117.0" layoutX="622.0" layoutY="269.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:sprites/player/esel.png" />
+         </image>
+      </ImageView>
+      <ListView fx:id="inventory" layoutX="264.0" layoutY="117.0" prefHeight="247.0" prefWidth="296.0" />
+      <TextArea fx:id="itemInfo" layoutX="582.0" layoutY="143.0" prefHeight="99.0" prefWidth="156.0" promptText="32re2fr" text="greg" />
+      <Button fx:id="tradeButton" layoutX="571.0" layoutY="88.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="178.0" style="-fx-background-color: #B6C454;" text="Handeln">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Text fx:id="inventory1Text" layoutX="289.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inventory  12.2 / 100 kg" wrappingWidth="271.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="inventory2Text" layoutX="760.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inventory  12.2 / 100 kg" wrappingWidth="271.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <ListView fx:id="inventory2" layoutX="760.0" layoutY="119.0" prefHeight="247.0" prefWidth="296.0" />
+      <Pane fx:id="resultPane" layoutX="429.0" layoutY="201.0" prefHeight="458.0" prefWidth="387.0" style="-fx-background-color: #edcd74;">
+         <children>
+            <Button fx:id="restartButton" layoutX="150.0" layoutY="396.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="117.0" text="Restart" />
+            <Label fx:id="resultLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="14.0" prefHeight="67.0" prefWidth="363.0" text="Results" textAlignment="CENTER">
+               <font>
+                  <Font size="46.0" />
+               </font>
+            </Label>
+            <Label fx:id="resultText" alignment="CENTER" contentDisplay="CENTER" layoutX="27.0" layoutY="97.0" prefHeight="283.0" prefWidth="327.0" text="text" textAlignment="CENTER">
+               <font>
+                  <Font size="46.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Button fx:id="buttonBiene" layoutX="43.0" layoutY="79.0" mnemonicParsing="false" opacity="0.0" prefHeight="105.0" prefWidth="109.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
     </children>
 </AnchorPane>

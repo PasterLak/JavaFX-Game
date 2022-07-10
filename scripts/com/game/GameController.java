@@ -3,46 +3,61 @@ package com.game;
 public final class GameController
 {
     private static GameController INSTANCE;
+    private static final byte MAX_DAY = 100;
 
-    private byte day = 0;
+    private byte day;
 
-    private Map map = new Map();
-    private Spieler spieler = new Spieler(map.START_ORT);
-
+    public final Map map = new Map();
+    public final Spieler spieler = new Spieler(map.START_ORT);
 
     public GameController()
     {
+        if(INSTANCE == null) INSTANCE = this;
+        AudioController.among.play();
         day = 1;
     }
 
     public static GameController getInstance()
     {
-        if(INSTANCE == null) {
-            INSTANCE = new GameController();
-        }
-
         return INSTANCE;
     }
 
-    public void nextDay()
+    public void updateDays(int count)
     {
-        day++;
-        UIController.INSTANCE.updateDays(day);
-        AudioController.INSTANCE.play();
+        if(count <= 0) return;
 
-        if(day == 100)
+        day += count;
+        UIController.INSTANCE.updateDays(day);
+        spieler.getCurrentOrt().getHandler().updateWaren();
+
+        if(day >= MAX_DAY)
         {
+            AudioController.win.play();
             endGame();
         }
     }
 
-    private void endGame()
+    public void endGame()
     {
         showResults();
     }
 
+    public void restart()
+    {
+        AudioController.among.play();
+        day = 1;
+        UIController.INSTANCE.updateDays(1);
+        spieler.restart();
+        UIController.INSTANCE.closeResult();
+    }
+
     private void showResults()
     {
+        UIController.INSTANCE.showResult();
+    }
 
+    public int currentDay()
+    {
+        return day;
     }
 }

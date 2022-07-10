@@ -14,4 +14,21 @@ public class Ware
         this.gewicht = gewicht;
         this.preis = preis;
     }
+
+    public boolean equal(Ware ware)
+    {
+        return this.id == ware.id;
+    }
+
+    public static boolean equal(Ware ware1, Ware ware2)
+    {
+        return ware1.id == ware2.id;
+    }
+
+    public String getDescription()
+    {
+        return name+ "\nid: " + id + "\ngewicht: " + gewicht + " kg\npreis: " + preis;
+    }
+
+
 }
